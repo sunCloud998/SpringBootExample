@@ -48,3 +48,7 @@ Thumbs.db
  *.ear
  .mvn/
 catalina.home_IS_UNDEFINED
+
+# script
+mnvw
+mvnw.cmd
