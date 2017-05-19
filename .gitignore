@@ -1,4 +1,4 @@
-# Created by .ignore support plugin (hsz.mobi)
+# maven ignore
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
@@ -13,9 +13,6 @@ hs_err_pid*
 
 # kdiff3 ignore
 *.orig
-
-# maven ignore
-target/
 
 # eclipse ignore
 .settings/
@@ -50,5 +47,6 @@ Thumbs.db
 catalina.home_IS_UNDEFINED
 
 # script
-mnvw
+mvnw
 mvnw.cmd
+/*/.gitignore

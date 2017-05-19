@@ -109,6 +109,7 @@
 
   <modules>
     <module>SpringBootStart</module>
+    <module>SpringBootTest</module>
   </modules>
 
 </project>
