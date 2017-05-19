@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sfy.example.dao.UserInfoDao">
+
+    <resultMap id="UserInfoMap" type="com.sfy.example.domain.UserInfo">
+        <id property="id" column="id" />
+        <result column="username" property="userName" />
+        <result column="password" property="password" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <sql id="UserInfo">
+        id,username,password,status
+    </sql>
+
+    <insert id="saveUserInfo" parameterType="com.sfy.example.domain.UserInfo">
+      INSERT INTO users (username,password,status) VALUES (#{userName},#{password},#{status})
+    </insert>
+
+    <select id="selectUserInfo" resultMap="UserInfoMap">
+        SELECT
+        <include refid="UserInfo" />
+        FROM users
+    </select>
+
+    <delete id="deleteUserInfo" parameterType="int">
+        delete from users where id=#{id}
+    </delete>
+</mapper>
